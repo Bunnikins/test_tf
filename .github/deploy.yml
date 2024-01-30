@@ -1,0 +1,15 @@
+name: Terraform Deploy to Dev
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    environment: github.ref
+    runs-on: ubuntu-latest
+
+    steps:
+      name: Nowt
+      run: echo "Nowt"
