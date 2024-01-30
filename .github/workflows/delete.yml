@@ -1,0 +1,17 @@
+name: Terraform Delete
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    environment: ${{ github.head_ref || github.ref_name }}
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Delete Deployment Environment  
+          uses: strumwolf/delete-deployment-environment@v2.3.0
+          with:
+            environment: ${{ github.head_ref || github.ref_name }}
+            token: ${{ github.token }}
