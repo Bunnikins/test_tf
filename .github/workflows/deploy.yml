@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      name: Nowt
-      run: echo "Nowt"
+      nowt:
+        name: Nowt
+        run: echo "Nowt"
