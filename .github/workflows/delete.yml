@@ -2,11 +2,6 @@ name: Terraform Delete
 
 on:
   workflow_dispatch:
-    branches:
-        - "**"
-        - "!dev"
-        - "!test"
-        - "!main"
 
 jobs:
   deploy:
